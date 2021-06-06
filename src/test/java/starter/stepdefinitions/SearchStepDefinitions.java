@@ -9,11 +9,16 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.thucydides.core.annotations.Steps;
 import starter.navigation.NavigateTo;
+import starter.pageobjects.LoginPageObjects;
 import starter.search.LookForInformation;
 import starter.search.WikipediaArticle;
 
 public class SearchStepDefinitions {
+
+    @Steps
+    LoginPageObjects loginPageObjects;
 
     @Given("{actor} is researching things on the internet")
     public void researchingThings(Actor actor) {
